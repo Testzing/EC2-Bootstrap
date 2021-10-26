@@ -1,0 +1,25 @@
+#!/bin/bash
+# Shell script for installing Java, Jenkins and Maven in Ubuntu EC2 instance
+
+# Command for installing Java 11
+sudo apt-get update
+sudo apt-get install default-jdk -y
+
+# Command for installing aws-cli
+sudo apt install awscli -y
+
+# Command for installing maven
+sudo apt-get install maven -y
+
+# Script for Jenkins installation
+
+#Add Repository key to the system
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+#  Append debian package repo address to the system
+echo deb http://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+
+sudo apt-get update
+# Install Jenkins
+sudo apt-get install jenkins -y
+echo "Jenkins installed successfully.."
