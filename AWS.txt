@@ -98,10 +98,3 @@ $ sudo yum install httpd -y
 $ sudo service httpd start
 $ sudo chkconfig httpd on
 $ sudo vi /var/www/html/index.html  (write some contents like "This is webserver")
-
-
-
-
-Package registered (OCS file I710020751258_0147002.PAT)
-
-Package registered (OCS file I710020751258_0147003.PAT)
